@@ -1,15 +1,17 @@
+package benchmark;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Benchmark class
+ * Class with the implementation of the three benchmarks
  *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class Benchmark {
     /**
-     * Benchmark threads
+     * benchmark.Benchmark threads
      * @param label Label for the benchmark
      * @param numThreads Number of threads to create
      */
@@ -38,7 +40,7 @@ public class Benchmark {
     }
 
     /**
-     * Benchmark processes
+     * benchmark.Benchmark processes
      * @param label Label for the benchmark
      * @param numProcesses Number of processes to create
      */
@@ -61,7 +63,7 @@ public class Benchmark {
         try {
             for (int i = 0; i < numProcesses; i++) {
                 Process p = new ProcessBuilder(
-                        "java", "-cp", System.getProperty("java.class.path"), "Task")
+                        "java", "-cp", System.getProperty("java.class.path"), "benchmark.Task")
                         .inheritIO()
                         .start();
                 workers.add(p);
@@ -76,7 +78,7 @@ public class Benchmark {
     }
 
     /**
-     * Benchmark child processes via a parent process
+     * benchmark.Benchmark child processes via a parent process
      * @param label Label for the benchmark
      * @param numChildProcesses Number of child processes to create
      */
@@ -87,7 +89,7 @@ public class Benchmark {
             // Launch a parent process that spawns child processes
             Process parent = new ProcessBuilder(
                     "java", "-cp", System.getProperty("java.class.path"),
-                    "ParentProcess", Integer.toString(numChildProcesses))
+                    "benchmark.ParentProcess", Integer.toString(numChildProcesses))
                     .inheritIO()
                     .start();
             parent.waitFor();

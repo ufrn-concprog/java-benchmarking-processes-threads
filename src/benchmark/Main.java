@@ -1,5 +1,7 @@
+package benchmark;
+
 /**
- * Main driver class
+ * benchmark.Main driver class
  *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
@@ -8,7 +10,7 @@ public class Main {
     private static final int NUM_WORKERS = 1000;
 
     /**
-     * Main method
+     * benchmark.Main method
      * @param args Command-line arguments
      */
     public static void main(String[] args) {

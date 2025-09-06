@@ -1,4 +1,4 @@
-import java.io.IOException;
+package benchmark;
 
 /**
  * A process that spawns child processes

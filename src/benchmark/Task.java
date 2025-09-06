@@ -1,12 +1,14 @@
+package benchmark;
+
 /**
- * Task to be executed by processes and threads.
+ * benchmark.Task to be executed by processes and threads.
  * It is intentionally trivial.
  *
  * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class Task {
     /**
-     * Task to be executed.
+     * benchmark.Task to be executed.
      * It actually does nothing to avoid interfering with the benchmark.
      */
     public static void doTask() {
