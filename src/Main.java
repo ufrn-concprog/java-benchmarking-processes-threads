@@ -1,26 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
-import java.io.IOException;
-
 /**
  * Main driver class
+ *
+ * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
  */
 public class Main {
     // Number of work units to create
     private static final int NUM_WORKERS = 1000;
 
-    public static void main(String[] args) throws InterruptedException, IOException {
+    /**
+     * Main method
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
         System.out.println("Benchmarking creation and joining of processes vs threads:\n");
 
-        try {
-            Benchmark.benchmarkProcesses("Processes", NUM_WORKERS);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        // TODO Allow for multiple runs (at least 20) for empirical validity and
+        //  record mean and standard deviation
+        Benchmark.benchmarkProcesses("Processes", NUM_WORKERS);
         Benchmark.benchmarkChildProcesses("Child Processes", NUM_WORKERS);
-
         Benchmark.benchmarkThreads("Threads", NUM_WORKERS);
     }
 }
