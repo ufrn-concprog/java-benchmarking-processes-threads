@@ -21,7 +21,7 @@ The benchmark currently runs for only one. Future work involves modifying the im
 
 ## 📂 Repository Structure
 
-```
+```bash
 .
 ├── doc/                # Javadoc documentation
 ├── src/benchmark       # Source code
@@ -37,10 +37,12 @@ The benchmark currently runs for only one. Future work involves modifying the im
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites
+
 - Java 11+ (works with any modern JDK)
 - A terminal or IDE (IntelliJ, Eclipse, VS Code, etc.)
 
 ### 🔧 Compilation
+
 Inside the project root, compile all sources:
 
 ```bash
@@ -57,7 +59,7 @@ java -cp out Main
 
 Expected output:
 
-```
+```bash
 Processes       | 5.3468 seconds for 1000 processes
 Child Processes | 5.2727 seconds for 1000 child processes (via parent process)
 Threads         | 0.0270 seconds for 1000 threads
