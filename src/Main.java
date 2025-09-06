@@ -12,7 +12,7 @@ public class Main {
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Benchmarking creation and joining of processes vs threads:\n");
+        System.out.println("Benchmarking creation of processes vs threads:\n");
 
         // TODO Allow for multiple runs (at least 20) for empirical validity and
         //  record mean and standard deviation
