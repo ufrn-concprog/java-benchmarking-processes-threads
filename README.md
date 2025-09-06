@@ -15,7 +15,7 @@ This benchmark measures the time to create 1,000 processes, child processes, and
 
 For the case of child processes, a parent process is created, and then it creates multiple child processes. Each process performs a command consisting of running either the [`Task`](src/benchmark/Task.java) or [`ParentProcess`](src/benchmark/ParentProcess.java) classes; the latter is the parent process used to create a given number of child processes. This is achieved via the facilities of the [`ProcessBuilder`](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/ProcessBuilder.html) class, which is used to create operating system processes.
 
-The benchmark currently runs for only one. Future work involves modifying the implementation of the [`Main`](src/main/benchmark/Main.java) class to support multiple runs (at least 20) for empirical validity, and recording the mean and standard deviation.
+The benchmark currently runs for only one. Future work involves modifying the implementation of the [`Main`](src/benchmark/Main.java) class to support multiple runs (at least 20) for empirical validity, and recording the mean and standard deviation.
 
 ---
 
